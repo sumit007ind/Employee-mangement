@@ -27,4 +27,4 @@ const Login = () => {
   )
 }
 
-export default 
+export default Login
