@@ -5,17 +5,19 @@ import Admindashboard from './Components/Auth/Dashboard/Admindashboard'
 import { getLocalStorage, setLocalStorage } from './utils/LocalStorage'
 
 const App = () => {
-  useEffect(() => {
-    //  setLocalStorage()
-    getLocalStorage()
+  // useEffect(() => {
+  //   //  setLocalStorage()
+  //   getLocalStorage()
+  // }, )
+  const [User, setUser] = useState(null)
+  const handleLogin= ()=>{
     
-  
-  
-  }, )
+  }
+
   
   return (
  <>
-    <Login />
+    {!user ?<login/> : ''}
  {/* <Employeedashboard/> */}
  {/* <Admindashboard/> */}
  </>
