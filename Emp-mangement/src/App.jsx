@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React, {useState} from 'react'
 import Login from './Components/Auth/Login'
 import Employeedashboard from './Components/Auth/Dashboard/Employeedashboard'
 import Admindashboard from './Components/Auth/Dashboard/Admindashboard'
@@ -10,14 +10,18 @@ const App = () => {
   //   getLocalStorage()
   // }, )
   const [User, setUser] = useState(null)
-  const handleLogin= ()=>{
-    
-  }
+  const handleLogin= (email,password)=>{
+  if(email == 'admin@me.com' && password == '123'){
+    console.log("this is admin")
+  }else{
+    alert("invalid credentials")
+  }}
+  handleLogin()
 
   
   return (
  <>
-    {!user ?<login/> : ''}
+    {!User ?<login/> : ''}
  {/* <Employeedashboard/> */}
  {/* <Admindashboard/> */}
  </>
