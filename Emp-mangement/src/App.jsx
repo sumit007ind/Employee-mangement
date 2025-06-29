@@ -24,7 +24,7 @@ const App = () => {
   
   return (
  <>
-    {!User ?<login handleLogin={handleLogin}/> : ''}
+    {!User ?<login/> : ''}
  {/* <Employeedashboard/> */}
  {/* <Admindashboard/> */}
  </>
