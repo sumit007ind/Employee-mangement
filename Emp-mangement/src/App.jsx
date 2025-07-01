@@ -12,19 +12,24 @@ const App = () => {
   const [User, setUser] = useState(null)
   const handleLogin= (email,password)=>{
   if(email == 'admin@me.com' && password == '123'){
-    console.log("this is admin")
-  }else if(email == 'User@me.com' && password == '123'){
-    console.log("this is user")
+   setUser('admin')
+   console.log (user)
+  }
+  else if(email == 'User@me.com' && password == '123'){
+    setUser('employee')
+    console.log(user)
+
   }
      else{
     alert("invalid credentials")
   }}
-  handleLogin('admin@me.com',123)
+
 
   
   return (
  <>
-    {!User ?<login/> : ''}
+    {!User ? <Login handleLogin={handleLogin}  /> : ''}
+    { User =='admin' ? <Admindashboard/> : <Employeedashboard/>}
  {/* <Employeedashboard/> */}
  {/* <Admindashboard/> */}
  </>
