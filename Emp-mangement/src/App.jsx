@@ -11,23 +11,29 @@ const App = () => {
     getLocalStorage()
   }, )
   const [User, setUser] = useState(null)
+  const authdata =  useContext(AuthContext)
+  
+
+  
   const handleLogin= (email,password)=>{
   if(email == 'admin@me.com' && password == '123'){
-   setUser('admin')
+   setUser( {role:'admin'})
    
   }
-  else if(email == 'User@me.com' && password == '123'){
-    setUser('employee')
-    
+  else if(authdata){
+    const empolyee=authdata.employees.find((e)=> email ==e.email && e.password== password)
+    if(employee){
+  setUser({role:empolyee})
+
+    }
+  
 
   }
      else{
     alert("invalid credentials")
   }}
 
-const data =  useContext(AuthContext)
-console.log(data)
-  
+
   return (
  <>
     {!User ? <Login handleLogin={handleLogin}  /> : ''}

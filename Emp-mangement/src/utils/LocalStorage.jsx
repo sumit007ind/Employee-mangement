@@ -2,6 +2,7 @@ const employees = [
   {
     "id": "emp1",
     "name": "John Doe",
+    "email": "john.doe@example.com",
     "password": "123",
     "tasks": [
       {
@@ -39,6 +40,7 @@ const employees = [
   {
     "id": "emp2",
     "name": "Jane Smith",
+    "email": "jane.smith@example.com",
     "password": "123",
     "tasks": [
       {
@@ -86,6 +88,7 @@ const employees = [
   {
     "id": "emp3",
     "name": "Michael Johnson",
+    "email": "michael.johnson@example.com",
     "password": "123",
     "tasks": [
       {
@@ -123,6 +126,7 @@ const employees = [
   {
     "id": "emp4",
     "name": "Emily Davis",
+    "email": "emily.davis@example.com",
     "password": "123",
     "tasks": [
       {
@@ -170,6 +174,7 @@ const employees = [
   {
     "id": "emp5",
     "name": "David Brown",
+    "email": "david.brown@example.com",
     "password": "123",
     "tasks": [
       {
@@ -225,6 +230,7 @@ const employees = [
     ]
   }
 ];
+
 const admin = [
   {
     "id": "admin1",
@@ -234,6 +240,7 @@ const admin = [
     "role": "admin"
   }
 ];
+
 export  const setLocalStorage= ()=>{
   localStorage.setItem('employees', JSON.stringify(employees))
   localStorage.setItem('admin', JSON.stringify(admin))
